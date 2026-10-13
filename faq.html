@@ -169,7 +169,31 @@ header{background:#fff!important;box-shadow:0 1px 0 var(--l)}
 footer{background:#14213D!important}
 .amt,.tot,.big,.tier b{font-family:Lexend,system-ui,sans-serif!important}
 </style>
-<style id="pnavcss">.pnav{display:none}@media(max-width:900px){.pnav{display:flex;gap:20px;overflow-x:auto;padding:9px 16px 11px;font-size:.92rem;font-weight:600;white-space:nowrap;border-top:1px solid #ECE5D3;background:#fff;scrollbar-width:none}.pnav a{color:#14213D;text-decoration:none}.pnav a.on{color:#9a7414;border-bottom:2px solid #E8B931}.pghead{padding-top:130px!important}}</style>
+<style id="v9">
+.inc{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;background:#14213D;color:#fff;border-radius:10px;padding:14px 18px;margin:26px 0 22px}.inc b{color:#E8B931;margin-right:6px}.inc span{background:rgba(255,255,255,.1);border-radius:6px;padding:5px 10px;font-size:.88rem}
+.crs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}
+.crd{background:#fff;border:1px solid #ECE5D3;border-radius:10px;padding:22px 20px;display:flex;flex-direction:column;position:relative;box-shadow:0 6px 24px rgba(20,33,61,.07)}
+.crd.hot{outline:2px solid #E8B931}.crd .badge{position:absolute;top:-11px;left:20px}
+.ct{font-family:Lexend,system-ui,sans-serif;font-weight:600;font-size:1.1rem;color:#14213D}
+.cp{font-family:Lexend,system-ui,sans-serif;font-size:2.3rem;font-weight:700;color:#14213D;margin:6px 0 0}.cp small{font-size:.9rem;font-weight:500;color:#5d636d;margin-left:6px}
+.cs{color:#9a7414;font-weight:600;font-size:.88rem;margin-bottom:12px}
+.crd p{font-size:.93rem;margin:0 0 10px}.crd ul,.crd ol{margin:0 0 14px;padding-left:20px;font-size:.9rem;line-height:1.55}.crd li{margin-bottom:4px}
+.tg{background:#FAF6EC;border-left:3px solid #E8B931;padding:8px 10px;font-size:.86rem;margin-bottom:14px}
+.crd .btn{margin-top:auto;justify-content:center;text-align:center}
+.note{background:#fff;border:1px dashed #E8B931;border-radius:10px;padding:16px 18px;margin-top:22px}
+.fine{color:#5d636d;font-size:.82rem;margin-top:12px}
+@media(max-width:1000px){.crs{grid-template-columns:1fr 1fr}}@media(max-width:640px){.crs{grid-template-columns:1fr}}
+#bkx{display:none}
+body.bkopen{overflow:hidden}
+body.bkopen main>section#book{display:block!important;position:fixed;inset:0;z-index:300;overflow-y:auto;background:rgba(10,18,36,.72);padding:24px 12px}
+body.bkopen main>section#book>.wrap{background:#fff;border-radius:12px;padding:30px 22px 26px;max-width:780px;position:relative;margin:0 auto}
+body.bkopen #bkx{display:block;position:absolute;top:8px;right:12px;font-size:2rem;line-height:1;background:none;border:0;cursor:pointer;color:#14213D}
+.licb{background:#FAF6EC;border-radius:10px;padding:14px 16px;margin:16px 0 6px}.licb .btn{cursor:pointer}#licPrev img{max-width:180px;border-radius:8px;margin-top:10px;display:block}
+#map{height:480px;border-radius:12px;border:1px solid #ECE5D3;background:#e9eef3;z-index:0}@media(max-width:900px){#map{height:360px}}
+.ack{background:#fff;border:1px solid #ECE5D3;border-radius:10px;padding:16px;margin-top:18px}.ack label{font-weight:600}
+.zr{margin-top:12px;padding:12px 14px;border-radius:8px;font-size:.93rem}.zr.free{background:#d9f5e4;color:#11663a}.zr.ext{background:#FFF6D6;color:#5b4500}.zr.out{background:#fde8e6;color:#9a2a1f}.zr .btn{margin-top:10px}
+</style>
+<style id="pnavcss">.pnav{display:none}.nl a.lang{border:1px solid #ECE5D3;border-radius:6px;padding:4px 10px}@media(max-width:900px){.pnav{display:flex;gap:20px;overflow-x:auto;padding:9px 16px 11px;font-size:.92rem;font-weight:600;white-space:nowrap;border-top:1px solid #ECE5D3;background:#fff;scrollbar-width:none}.pnav a{color:#14213D;text-decoration:none}.pnav a.on{color:#9a7414;border-bottom:2px solid #E8B931}.pghead{padding-top:130px!important}}</style>
 <style id="pages">main>section:not(#faq,#rules,.pghead){display:none!important}main>section:is(#faq,#rules){display:block!important}.pghead{background:#14213D;color:#fff;padding:120px 0 56px}.pghead h1{color:#fff!important;font-family:Lexend,system-ui,sans-serif;font-size:clamp(2rem,5vw,3.2rem);margin:0 0 10px}.pghead p{color:#D9DFEA;max-width:620px;font-size:1.1rem;margin:0}.pghead .crumb{color:#E8B931;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}.nl a.on{color:#9a7414;font-weight:700}@media(max-width:900px){.pghead{padding:96px 0 40px}}</style>
 </head>
 <body>
@@ -178,8 +202,8 @@ footer{background:#14213D!important}
 
 <header><nav class="wrap">
   <a href="./" class="brand"><span class="lp">L</span><span data-k="brand.name">Pass &amp; Park</span></a>
-  <div class="nl"><a href="./">Home</a><a href="lessons.html">Lessons &amp; Prices</a><a href="about.html">About</a><a href="areas.html">Areas</a><a class="on" href="faq.html">FAQ</a><a class="btn b-k" href="book.html" style="padding:10px 18px">Book a lesson</a></div>
-</nav><div class="pnav"><a href="./">Home</a><a href="lessons.html">Lessons &amp; Prices</a><a href="book.html">Book</a><a href="about.html">About</a><a href="areas.html">Areas</a><a class="on" href="faq.html">FAQ</a></div></header>
+  <div class="nl"><a href="./">Home</a><a href="lessons.html">Lessons &amp; Prices</a><a href="about.html">About</a><a href="areas.html">Areas</a><a class="on" href="faq.html">FAQ</a><a href="hi.html" lang="hi" class="lang">हिंदी</a><a class="btn b-k" href="book.html" data-book="" style="padding:10px 18px">Book a lesson</a></div>
+</nav><div class="pnav"><a href="./">Home</a><a href="lessons.html">Lessons &amp; Prices</a><a href="book.html">Book</a><a href="about.html">About</a><a href="areas.html">Areas</a><a class="on" href="faq.html">FAQ</a><a href="hi.html" lang="hi">हिंदी</a></div></header>
 
 <div style="display:none"><i id="roadFill"></i><b id="roadCar"></b><div id="cur"></div><span id="hcar"></span></div>
 <main id="top"><section class="pghead"><div class="wrap"><div class="crumb">Pass &amp; Park Driving School</div><h1>FAQ &amp; NSW Rules</h1><p>Everything learners and parents ask us, plus the key NSW licence rules.</p></div></section>
@@ -188,9 +212,9 @@ footer{background:#14213D!important}
   <div class="wrap hg">
     <div>
       <div class="eyebrow" style="color:#3a3200" data-k="hero.eyebrow">Thornton · Maitland · Lower Hunter</div>
-      <h2 data-k="hero.title">Pass &amp; Park.<br>Drive for life.</h2>
+      <h2 data-k="hero.title">Pass with confidence.<br>Park like a pro.</h2>
       <p data-k="hero.text">Automatic car lessons with a calm, NSW-licensed instructor. Door-to-door pick-up, live online booking and lessons in English, Hindi or Punjabi.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn b-k" href="book.html">📅 See live prices & times</a><a class="btn" href="tel:+61455585556">📞 <span data-k="contact.phone">0455 585 556</span></a></div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn b-k" href="book.html" data-book="">📅 Check times & book</a><a class="btn" href="tel:+61455585556">📞 <span data-k="contact.phone">0455 585 556</span></a></div>
       <div class="chips"><span class="chip" data-k="hero.chip1">🛡️ Safety-first dual-control car</span><span class="chip" data-k="hero.chip2">🏠 Door-to-door pick-up</span><span class="chip" data-k="hero.chip3">🗣️ English · हिंदी · ਪੰਜਾਬੀ</span></div>
     </div>
     <div class="tilt" id="tilt" style="display:none"></div>
@@ -228,17 +252,33 @@ footer{background:#14213D!important}
 
 <section id="pricing" data-bg="#f6f6f2">
   <div class="wrap">
-    <div class="eyebrow rv">Prices</div>
-    <h2 class="rv" data-k="price.title">The more you book, the less you pay</h2>
-    <p class="lead rv" data-k="price.lead">All lessons are 1 hour, one-on-one, in an automatic car. Price per lesson depends on how many you buy at once. Unused lessons stay on your account for later bookings.</p>
-    <div class="tiers">
-      <div class="tier rv"><small>1 lesson</small><div class="amt">$<span data-p="one">90</span></div><small>per lesson</small></div>
-      <div class="tier rv"><small>2–4 lessons</small><div class="amt">$<span data-p="two">85</span></div><small>each</small></div>
-      <div class="tier rv"><small>5–9 lessons</small><div class="amt">$<span data-p="five">80</span></div><small>each</small></div>
-      <div class="tier hot rv"><span class="badge">BEST VALUE</span><small>10+ lessons</small><div class="amt">$<span data-p="ten">75</span></div><small>each</small></div>
-      <div class="tier rv"><small>Test package</small><div class="amt">$<span data-p="test">200</span></div><small>1-hr warm-up + car for test</small></div>
+    <div class="eyebrow rv">Lessons &amp; courses</div>
+    <h2 class="rv">Every lesson has a goal. Every course has a finish line.</h2>
+    <p class="lead rv">You're not paying for hours, you're paying for progress. Each course follows a clear syllabus with targets, and RJ ticks them off with you, so you always know how close you are to driving on your own or passing your test.</p>
+    <div class="inc rv"><b>Every lesson includes</b><span>Door-to-door pick-up</span><span>Quick recap &amp; plan</span><span>One focused skill</span><span>Real-road practice</span><span>Written feedback &amp; next goal</span><span>3× logbook hours*</span></div>
+    <div class="crs">
+      <div class="crd rv"><div class="ct">Pay as you go</div><div class="cp">$<span data-p="one">90</span><small>/hour</small></div><div class="cs">2-hour session: $<span data-pt="long">80</span>/hour</div>
+        <p><b>Your first lesson is a driving assessment.</b> We see where you're at, set up the car around you and agree a personal plan.</p>
+        <ul><li>Perfect to try us out</li><li>Book 1, 2 or 3 hours at a time</li><li>Top-up practice before a test</li></ul>
+        <button class="btn b-k" data-book="1">Book a lesson</button></div>
+      <div class="crd rv"><div class="ct">Starter Course</div><div class="cp">$<span data-pt="five">400</span><small>5 lessons</small></div><div class="cs">$<span data-p="five">80</span> per lesson</div>
+        <p><b>From first drive to confident on local roads.</b></p>
+        <ol><li><b>Car control:</b> cockpit drill, smooth take-off &amp; stopping</li><li><b>Steering &amp; speed:</b> left/right turns in quiet streets</li><li><b>Intersections:</b> give-way rules, single-lane roundabouts</li><li><b>Busier roads:</b> lane position, traffic lights</li><li><b>Review drive:</b> 20-min route + progress report</li></ol>
+        <div class="tg">Target: drive a familiar local route with little help.</div>
+        <button class="btn b-k" data-book="5">Start this course</button></div>
+      <div class="crd hot rv"><span class="badge">BEST VALUE</span><div class="ct">Confident Driver Course</div><div class="cp">$<span data-pt="ten">750</span><small>10 lessons</small></div><div class="cs">$<span data-p="ten">75</span> per lesson · 30 logbook hours*</div>
+        <p><b>Everything in Starter, then test-ready.</b></p>
+        <ol start="6"><li><b>Lane changes &amp; merging,</b> multi-lane roundabouts</li><li><b>80–100 km/h roads</b> &amp; highway entry/exit</li><li><b>Parking:</b> reverse parallel, 90°, kerbside stop, 3-point turn</li><li><b>Hazards:</b> school zones, cyclists, night &amp; wet tips</li><li><b>Mock driving test</b> on real test routes + scored report</li></ol>
+        <div class="tg">Target: drive independently and be ready to book your test.</div>
+        <button class="btn b-k" data-book="10">Start this course</button></div>
+      <div class="crd rv"><div class="ct">Test Day package</div><div class="cp">$<span data-p="test">200</span><small>one-off</small></div><div class="cs">Our dual-control car for your test</div>
+        <p><b>Arrive calm and warmed up.</b></p>
+        <ul><li>Pick-up from your place</li><li>1-hour warm-up on local test routes</li><li>Use of our car for the test</li><li>Drop-off afterwards</li></ul>
+        <button class="btn b-k" data-book="test">Book test day</button></div>
     </div>
-    <div class="calc rv" id="calc">
+    <div class="note rv"><b>Just want to learn to drive, not sit a test yet?</b> That's fine: plenty of our students only want the skills and confidence first. Take the Starter Course and keep practising at your own pace. You'll need a current learner licence (or an overseas/interstate licence) to drive on NSW roads.</div>
+    <p class="fine">*NSW 3-for-1: for learners under 25, each 1-hour lesson with a licensed instructor counts as 3 logbook hours, for up to 10 lessons (30 hours). Unused course lessons stay on your account for later bookings.</p>
+    <div class="calc" id="calc" style="display:none">
       <h3 style="font-size:1.4rem">Exact price calculator</h3>
       <div class="cg">
         <div>
@@ -250,12 +290,12 @@ footer{background:#14213D!important}
         <div><div class="lines" id="cOut"></div>
           <table class="cxl" id="cCxl"></table></div>
       </div>
-    </div>
+    
   </div>
 </section>
 
 <section id="book" data-bg="#ffffff">
-  <div class="wrap">
+  <div class="wrap"><button id="bkx" aria-label="Close">×</button>
     <div class="eyebrow rv">Book online</div>
     <h2 class="rv" data-k="book.title">Live quote → pick a time → done</h2>
     <p class="lead rv" data-k="book.lead">Your booking is sent to RJ as a request. She confirms it (usually within a few hours) and you get a confirmation email with payment details. Prefer to talk? Call or WhatsApp anytime.</p>
@@ -266,14 +306,14 @@ footer{background:#14213D!important}
         <div style="display:flex;gap:8px"><input id="addr" placeholder="e.g. 12 Smith St, East Maitland" autocomplete="street-address"><button class="btn b-k" id="findA" style="flex-shrink:0">Find</button></div>
         <div id="aRes" class="opts" style="margin-top:10px"></div>
         <label class="chk"><input type="checkbox" id="diffDrop"> Drop me somewhere else after the lesson</label>
-        <div id="dropBox" style="display:none"><div style="display:flex;gap:8px"><input id="drop" placeholder="Drop-off address"><button class="btn" id="findD" style="flex-shrink:0">Find</button></div><div id="dRes" class="opts" style="margin-top:10px"></div></div>
+        <div id="dropBox" style="display:none"><div style="display:flex;gap:8px"><input id="drop" placeholder="Drop-off address"><button class="btn" id="findD" style="flex-shrink:0">Find</button></div><div id="dRes" class="opts" style="margin-top:10px"></div><p class="fine" style="margin-top:8px">Drop-off is <b>discretionary</b>: it depends on traffic and RJ's next pick-up on the day. If it isn't feasible, RJ will drop you back at your pick-up address.</p></div>
         <div id="p1msg"></div>
       </div>
       <div class="pane" id="p2">
         <label>What are you booking?</label>
         <div class="opts" id="pkg"></div>
-        <label>Length of this booking</label>
-        <div class="opts" id="hrs"><button class="opt on" data-v="1">1 hour</button><button class="opt" data-v="2">2 hours (one trip — travel fee once)</button></div>
+        <label>Session length</label>
+        <div class="opts" id="hrs"><button class="opt on" data-v="1">1 hour<small>standard lesson</small></button><button class="opt" data-v="2">2 hours back-to-back<small>$80/hr · half travel</small></button><button class="opt" data-v="3">3 hours<small>$80/hr · RJ confirms first</small></button></div>
         <div id="creditBox" style="display:none"><label>Email you booked with before</label><input id="cEmail" type="email"></div>
         <div id="quote"></div>
         <div style="display:flex;gap:10px;margin-top:16px"><button class="btn" data-back="1">← Back</button><button class="btn b-k" id="to3">Choose a time →</button></div>
@@ -298,7 +338,11 @@ footer{background:#14213D!important}
           <div><label>Emergency contact (name & phone)</label><input id="fEm"></div>
         </div>
         <label>Anything RJ should know? (special requests, nerves, school pick-up…)</label><textarea id="fNotes" rows="3"></textarea>
-        <label class="chk"><input type="checkbox" id="a1"> I'll show my physical licence to the instructor before the lesson starts. The lesson can't go ahead without it.</label>
+        <div class="licb"><label>Photo of your licence <span id="licReq">(required)</span></label>
+        <p class="fine">Take a photo of your licence card, or upload a screenshot of your NSW Digital Driver Licence from the Service NSW app. It's checked automatically against the details above and stored privately for your instructor only.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><label class="btn b-k" for="licCam">📷 Take photo</label><label class="btn" for="licUp">🖼️ Upload screenshot</label></div>
+        <input type="file" id="licCam" accept="image/*" capture="environment" hidden><input type="file" id="licUp" accept="image/*" hidden><div id="licPrev"></div></div>
+        <label class="chk"><input type="checkbox" id="a1"> I'll show my licence (card or live digital licence) to the instructor before the lesson starts. The lesson can't go ahead without it.</label>
         <label class="chk"><input type="checkbox" id="a2"> I accept the cancellation policy and that the booking is confirmed only once RJ approves it and payment is received.</label>
         <label class="chk" id="a3w" style="display:none"><input type="checkbox" id="a3"> Test package: I accept damage while I'm driving is subject to the insurance excess of $<span data-p="excess">1000</span>.</label>
         <div id="sum" class="qbox"></div>
@@ -363,10 +407,12 @@ footer{background:#14213D!important}
 </section>
 
 <section id="area" data-bg="#f6f6f2">
-  <div class="wrap g2">
+  <div class="wrap g2" style="align-items:start">
     <div><div class="eyebrow rv">Service area</div><h2 class="rv" data-k="area.title">Thornton & up to 30 minutes around</h2>
-      <p class="lead rv" data-k="area.lead">Free pick-up within about 12 minutes' drive of Thornton. Further out, a small travel fee is added once per trip. Your exact fee is calculated from your real address when you book.</p></div>
-    <div class="card rv"><p data-k="area.list" style="color:var(--k)"><b>Free zone (≤12 min):</b> Thornton, Chisholm, Beresfield, Woodberry, Ashtonfield, East Maitland, Metford, Tenambit, Tarro<br><br><b>+$10 (12–20 min):</b> Maitland, Morpeth, Bolwarra, Lorn, Telarah, Rutherford, Hexham, Raymond Terrace, Gillieston Heights<br><br><b>+$20 (20–30 min):</b> Kurri Kurri, Cessnock, Medowie, Wallsend, Maryland, Fletcher, Lambton, Greta, Branxton</p></div>
+      <p class="lead rv" data-k="area.lead">Free pick-up within about 12 minutes of Thornton. Further out we still come to you: any small travel charge is worked out from your real address and lesson time at checkout, and it is halved on 2-hour sessions.</p>
+      <div class="ack"><label for="aq">Check your suburb, postcode or street</label><div style="display:flex;gap:8px"><input id="aq" placeholder="e.g. 2320, Rutherford or 12 Smith St"><button class="btn b-k" id="aGo" style="flex-shrink:0">Check</button></div><div id="aOut"></div></div>
+      <div class="card" style="margin-top:18px"><p data-k="area.list" style="color:var(--k)"><b>Free zone (≤12 min):</b> Thornton, Chisholm, Beresfield, Woodberry, Ashtonfield, East Maitland, Metford, Tenambit, Tarro<br><br><b>+$10 (12–20 min):</b> Maitland, Morpeth, Bolwarra, Lorn, Telarah, Rutherford, Hexham, Raymond Terrace, Gillieston Heights<br><br><b>+$20 (20–30 min):</b> Kurri Kurri, Cessnock, Medowie, Wallsend, Maryland, Fletcher, Lambton, Greta, Branxton</p></div></div>
+    <div><div id="map"></div><p class="fine" style="margin-top:8px">Circles are approximate. Your exact drive time is checked from your real address when you book.</p></div>
   </div>
 </section>
 
@@ -380,10 +426,10 @@ footer{background:#14213D!important}
 
 <footer><div class="wrap">
   <div><div class="brand" style="color:#fff;margin-bottom:10px"><span class="lp">L</span><span data-k="brand.full">Pass &amp; Park Driving School</span></div><span data-k="foot.text">Automatic car lessons · Thornton NSW 2322 · Serving Maitland, Raymond Terrace, Kurri Kurri, Cessnock & Newcastle.</span></div>
-  <div>📞 <a href="tel:+61455585556" data-k="contact.phone2">0455 585 556</a><br>✉️ <a href="mailto:info.ssdrivingschool@gmail.com" data-k="contact.email">info.ssdrivingschool@gmail.com</a><div class="social" id="social"><a data-k-href="social.instagram" href="" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM12 3.6c2.7 0 3 0 4.1.1 2.7.1 4 1.4 4.1 4.1.1 1.1.1 1.4.1 4.1s0 3-.1 4.1c-.1 2.7-1.4 4-4.1 4.1-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-2.7-.1-4-1.4-4.1-4.1C3.7 15 3.6 14.7 3.6 12s0-3 .1-4.1c.1-2.7 1.4-4 4.1-4.1C8.9 3.7 9.3 3.6 12 3.6zM12 2C9.3 2 8.9 2 7.8 2.1 4.2 2.2 2.2 4.2 2.1 7.8 2 8.9 2 9.3 2 12s0 3.1.1 4.2c.1 3.6 2.1 5.6 5.7 5.7 1.1.1 1.5.1 4.2.1s3.1 0 4.2-.1c3.6-.1 5.6-2.1 5.7-5.7.1-1.1.1-1.5.1-4.2s0-3.1-.1-4.2c-.1-3.6-2.1-5.6-5.7-5.7C15.1 2 14.7 2 12 2z"/></svg></a><a data-k-href="social.facebook" href="" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg></a><a data-k-href="social.tiktok" href="" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 5.8A4.3 4.3 0 0115.5 3h-3.1v12.4a2.6 2.6 0 11-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 104.9 5.7V9a7.3 7.3 0 004.3 1.4V7.3a4.3 4.3 0 01-3.2-1.5z"/></svg></a><a data-k-href="social.youtube" href="" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 002.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 001.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a><a data-k-href="social.google" href="" target="_blank" rel="noopener" aria-label="Google reviews" title="Google reviews"><svg viewBox="0 0 24 24"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 01-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3zM12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0012 22zM6.4 14a6 6 0 010-3.9V7.4H3.1a10 10 0 000 9.1L6.4 14zM12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 003.1 7.4L6.4 10C7.2 7.7 9.4 6 12 6z"/></svg></a><a data-k-href="social.whatsapp" href="" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.8 1c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></a></div><br><small>Photos: Unsplash · © <span id="yr"></span> Pass &amp; Park Driving School</small></div>
+  <div>📞 <a href="tel:+61455585556" data-k="contact.phone2">0455 585 556</a><br>✉️ <a href="mailto:info.ssdrivingschool@gmail.com" data-k="contact.email">info.ssdrivingschool@gmail.com</a><div class="social" id="social"><a data-k-href="social.instagram" href="" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM12 3.6c2.7 0 3 0 4.1.1 2.7.1 4 1.4 4.1 4.1.1 1.1.1 1.4.1 4.1s0 3-.1 4.1c-.1 2.7-1.4 4-4.1 4.1-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-2.7-.1-4-1.4-4.1-4.1C3.7 15 3.6 14.7 3.6 12s0-3 .1-4.1c.1-2.7 1.4-4 4.1-4.1C8.9 3.7 9.3 3.6 12 3.6zM12 2C9.3 2 8.9 2 7.8 2.1 4.2 2.2 2.2 4.2 2.1 7.8 2 8.9 2 9.3 2 12s0 3.1.1 4.2c.1 3.6 2.1 5.6 5.7 5.7 1.1.1 1.5.1 4.2.1s3.1 0 4.2-.1c3.6-.1 5.6-2.1 5.7-5.7.1-1.1.1-1.5.1-4.2s0-3.1-.1-4.2c-.1-3.6-2.1-5.6-5.7-5.7C15.1 2 14.7 2 12 2z"/></svg></a><a data-k-href="social.facebook" href="" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg></a><a data-k-href="social.tiktok" href="" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 5.8A4.3 4.3 0 0115.5 3h-3.1v12.4a2.6 2.6 0 11-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 104.9 5.7V9a7.3 7.3 0 004.3 1.4V7.3a4.3 4.3 0 01-3.2-1.5z"/></svg></a><a data-k-href="social.youtube" href="" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 00-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 002.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 001.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 001.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a><a data-k-href="social.google" href="" target="_blank" rel="noopener" aria-label="Google reviews" title="Google reviews"><svg viewBox="0 0 24 24"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4a4.6 4.6 0 01-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3zM12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0012 22zM6.4 14a6 6 0 010-3.9V7.4H3.1a10 10 0 000 9.1L6.4 14zM12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 003.1 7.4L6.4 10C7.2 7.7 9.4 6 12 6z"/></svg></a><a data-k-href="social.whatsapp" href="" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.8 1c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></a></div><br><small>© <span id="yr"></span> Pass &amp; Park Driving School</small></div>
 </div></footer>
 
-<div class="mbar"><a class="btn b-k" href="tel:+61455585556">Call</a><a class="btn b-y" href="book.html">Book</a></div>
+<div class="mbar"><a class="btn b-k" href="tel:+61455585556">Call</a><a class="btn b-y" href="book.html" data-book="">Book</a></div>
 <div class="tip" id="tip"><b id="tipT">💡 Pro tip</b><span id="tipB"></span></div>
 <button class="fab" id="fab" aria-label="Chat with Pass &amp; Park">💬</button>
 <div class="chat" id="chat"><div class="ch"><span class="lp" style="width:34px;height:34px;font-size:1.1rem">L</span><div style="flex:1"><b>Pass &amp; Park Assistant</b><br><small style="opacity:.8">Prices · lessons · bookings</small></div><button onclick="toggleChat()" style="background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer">×</button></div>
@@ -395,7 +441,7 @@ var API = "https://script.google.com/macros/s/AKfycbwDzfI8GrcDGzRFAqjMM83Z2L5Dmu
 /* ======================================================================== */
 var C = {}, FAQ = [], PRICES = {};
 var DEF_PRICES = {'price.one':90,'price.two_to_four':85,'price.five_to_nine':80,'price.ten_plus':75,'price.test_package':200,'price.test_excess':1000,
- 'travel.free_max_min':12,'travel.tier1_max_min':20,'travel.tier1_fee':10,'travel.tier2_max_min':30,'travel.tier2_fee':20,'cancel.free_hours':24,'cancel.late_hours':2,'cancel.late_pct':50,'cancel.noshow_pct':100};
+ 'travel.free_max_min':12,'travel.tier1_max_min':20,'travel.tier1_fee':10,'travel.tier2_max_min':30,'travel.tier2_fee':20,'price.long_session':80,'travel.per_min':.75,'travel.cap':15,'travel.long_pct':50,'cancel.free_hours':24,'cancel.late_hours':2,'cancel.late_pct':50,'cancel.noshow_pct':100};
 var DEF_FAQ = [
  {q:'How much is a lesson?',a:'A single 1-hour lesson is $90. Book 2–4 lessons and each is $85, 5–9 lessons are $80 each, and 10+ lessons are $75 each.',k:'price,cost,how much',show:true},
  {q:'Do you pick me up?',a:'Yes — from home, school or work. No travel fee within about 12 minutes of Thornton; a small fee applies once per trip further out (up to 30 minutes).',k:'pick,pickup,travel',show:true},
@@ -426,7 +472,7 @@ function applyContent(live){
   Object.keys(DEF_PRICES).forEach(function(k){PRICES[k]=C[k]!=null&&C[k]!==''?C[k]:DEF_PRICES[k]});
   var missing={};Object.keys(defaults).forEach(function(k){if(!(k in C))missing[k]=defaults[k]});
   if(live&&API&&Object.keys(missing).length)post({action:'seed',keys:missing}).catch(function(){});
-  $$('[data-p]').forEach(function(el){el.textContent={one:P('price.one'),two:P('price.two_to_four'),five:P('price.five_to_nine'),ten:P('price.ten_plus'),test:P('price.test_package'),excess:P('price.test_excess')}[el.dataset.p]});
+  $$('[data-pt]').forEach(function(el){var k=el.dataset.pt;el.textContent=k==='five'?5*P('price.five_to_nine'):k==='ten'?10*P('price.ten_plus'):P('price.long_session')});$$('[data-p]').forEach(function(el){el.textContent={one:P('price.one'),two:P('price.two_to_four'),five:P('price.five_to_nine'),ten:P('price.ten_plus'),test:P('price.test_package'),excess:P('price.test_excess')}[el.dataset.p]});
   renderFaq();calc();buildPkgs();
   if(live)window.__ssReady=true;
 }
@@ -444,45 +490,52 @@ function calc(){var n=+$('#cRange').value;$('#cN').textContent=n;var u=unit(n),t
   var lv=u*cLen;$('#cCxl').innerHTML='<tr><td colspan="2"><b style="color:#fff">If you cancel one '+cLen+'-hr booking ('+money(lv)+'):</b></td></tr><tr><td>More than '+P('cancel.free_hours')+' hrs notice</td><td>Free</td></tr><tr><td>'+P('cancel.late_hours')+'–'+P('cancel.free_hours')+' hrs notice</td><td>'+money(lv*P('cancel.late_pct')/100)+' ('+P('cancel.late_pct')+'%)</td></tr><tr><td>Under '+P('cancel.late_hours')+' hrs / no-show</td><td>'+money(lv*P('cancel.noshow_pct')/100)+' ('+P('cancel.noshow_pct')+'%)</td></tr>'}
 
 /* ===== booking wizard ===== */
-var B={address:'',coords:'',dropoff:'',purchase:'1',hours:1,date:'',time:'',quote:null};
-function step(n){$$('.pane').forEach(function(p,i){p.classList.toggle('on',i===n-1)});$$('.steps span').forEach(function(s,i){s.classList.toggle('on',i<n)});$('#book').scrollIntoView({behavior:'smooth'})}
+var B={address:'',coords:'',dropoff:'',purchase:'1',hours:1,date:'',time:'',quote:null,lic:''},SL={};
+function pur(){return B.purchase==='1'?String(B.hours):B.purchase}
+function step(n){$$('.pane').forEach(function(p,i){p.classList.toggle('on',i===n-1)});$$('.steps span').forEach(function(s,i){s.classList.toggle('on',i<n)});if(document.body.classList.contains('bkopen'))$('#book').scrollTop=0;else $('#book').scrollIntoView({behavior:'smooth'})}
 $$('[data-back]').forEach(function(b){b.onclick=function(){step(+b.dataset.back)}});
 function noApi(el){el.innerHTML='<div class="msg err">Online booking is being switched on — please call or WhatsApp <a href="tel:+61455585556">0455 585 556</a> to book.</div>'}
 function find(inp,res,isDrop){var q=$(inp).value.trim();if(q.length<4)return;if(!API)return noApi($('#p1msg'));$(res).innerHTML='<span class="spin"></span> Searching…';
   api({action:'geocode',q:q}).then(function(d){if(!d.results.length){$(res).innerHTML='<div class="msg err">No match — try adding the suburb.</div>';return}
    $(res).innerHTML=d.results.map(function(r,i){return '<button class="opt" data-i="'+i+'">📍 '+esc(r.address)+'</button>'}).join('');
-   $$(res+' .opt').forEach(function(b){b.onclick=function(){var r=d.results[+b.dataset.i];if(isDrop){B.dropoff=r.address;$(res).innerHTML='<div class="msg ok">Drop-off: '+esc(r.address)+'</div>'}else{B.address=r.address;B.coords=r.lat+','+r.lng;track('Address entered',r.address);$(res).innerHTML='<div class="msg ok">Pick-up: '+esc(r.address)+'</div>';if(!$('#diffDrop').checked||B.dropoff){step(2);getQuote()}}}})}).catch(function(e){$(res).innerHTML='<div class="msg err">'+esc(e.message)+'</div>'})}
+   $$(res+' .opt').forEach(function(b){b.onclick=function(){var r=d.results[+b.dataset.i];if(isDrop){B.dropoff='';$(res).innerHTML='<span class="spin"></span> Checking drop-off…';api({action:'area',q:r.address}).then(function(z){z=z.area;if(!z.found||z.zone==='outside'){$(res).innerHTML='<div class="msg err">That drop-off is outside our service area'+(z.driveMin?' (about '+z.driveMin+' min from Thornton)':'')+'. Please pick somewhere closer.</div>';return}B.dropoff=r.address;$(res).innerHTML='<div class="msg ok">Drop-off: '+esc(r.address)+' ('+z.driveMin+' min from Thornton)</div>';if(B.address){step(2);getQuote()}}).catch(function(e){$(res).innerHTML='<div class="msg err">'+esc(e.message)+'</div>'})}else{B.address=r.address;B.coords=r.lat+','+r.lng;track('Address entered',r.address);$(res).innerHTML='<div class="msg ok">Pick-up: '+esc(r.address)+'</div>';if(!$('#diffDrop').checked||B.dropoff){step(2);getQuote()}}}})}).catch(function(e){$(res).innerHTML='<div class="msg err">'+esc(e.message)+'</div>'})}
 $('#findA').onclick=function(){find('#addr','#aRes',false)};$('#addr').onkeydown=function(e){if(e.key==='Enter')find('#addr','#aRes',false)};
-$('#findD').onclick=function(){find('#drop','#dRes',true)};$('#diffDrop').onchange=function(){$('#dropBox').style.display=this.checked?'block':'none';if(!this.checked)B.dropoff=''};
-function buildPkgs(){var o=[['1','1 lesson',money(P('price.one'))],['2','2 lessons',money(P('price.two_to_four'))+' each'],['3','3 lessons',money(P('price.two_to_four'))+' each'],['4','4 lessons',money(P('price.two_to_four'))+' each'],['5','5 lessons',money(P('price.five_to_nine'))+' each'],['10','10 lessons',money(P('price.ten_plus'))+' each · best value'],['test','Test package',money(P('price.test_package'))+' incl. car'],['credit','I have prepaid lessons','use my credit']];
+$('#findD').onclick=function(){find('#drop','#dRes',true)};$('#diffDrop').onchange=function(){$('#dropBox').style.display=this.checked?'block':'none';if(!this.checked)B.dropoff='';else if(B.address&&!B.dropoff)$('#p1msg').innerHTML='<div class="msg ok">Now enter the drop-off address and press Find.</div>'};
+function buildPkgs(){var o=[['1','Pay as you go',money(P('price.one'))+'/hr · '+money(P('price.long_session'))+'/hr for 2-3 hr sessions'],['5','Starter Course · 5 lessons',money(5*P('price.five_to_nine'))+' ('+money(P('price.five_to_nine'))+' each)'],['10','Confident Driver Course · 10 lessons',money(10*P('price.ten_plus'))+' ('+money(P('price.ten_plus'))+' each) · best value'],['test','Test Day package',money(P('price.test_package'))+' incl. car'],['credit','I have prepaid lessons','use my credit']];
   $('#pkg').innerHTML=o.map(function(x){return '<button class="opt'+(B.purchase===x[0]?' on':'')+'" data-v="'+x[0]+'">'+x[1]+'<small>'+x[2]+'</small></button>'}).join('');
-  $$('#pkg .opt').forEach(function(b){b.onclick=function(){B.purchase=b.dataset.v;$$('#pkg .opt').forEach(function(x){x.classList.toggle('on',x===b)});$('#creditBox').style.display=B.purchase==='credit'?'block':'none';if(B.purchase==='test'||B.purchase==='1'){B.hours=1;$$('#hrs .opt').forEach(function(x){x.classList.toggle('on',x.dataset.v==='1')})}getQuote()}})}
-$$('#hrs .opt').forEach(function(b){b.onclick=function(){if(b.dataset.v==='2'&&(B.purchase==='1'||B.purchase==='test'))return alert('2-hour bookings need at least 2 lessons.');B.hours=+b.dataset.v;$$('#hrs .opt').forEach(function(x){x.classList.toggle('on',x===b)});getQuote()}});
+  $$('#pkg .opt').forEach(function(b){b.onclick=function(){B.purchase=b.dataset.v;$$('#pkg .opt').forEach(function(x){x.classList.toggle('on',x===b)});$('#creditBox').style.display=B.purchase==='credit'?'block':'none';if(B.purchase==='test'){B.hours=1;$$('#hrs .opt').forEach(function(x){x.classList.toggle('on',x.dataset.v==='1')})}getQuote()}})}
+$$('#hrs .opt').forEach(function(b){b.onclick=function(){if(b.dataset.v!=='1'&&B.purchase==='test')return;B.hours=+b.dataset.v;$$('#hrs .opt').forEach(function(x){x.classList.toggle('on',x===b)});getQuote()}});
 $('#cEmail').onchange=getQuote;
 function quoteHtml(q){if(q.outOfArea)return '<div class="msg err">Your address is about '+q.driveMin+' min from us — outside our 30-minute area. Call us and we\'ll see what we can do.</div>';if(q.error)return '<div class="msg err">'+esc(q.error)+'</div>';
-  var cx=q.cancel,lv=cx.lessonValue;
-  return '<div class="qbox">'+q.lines.map(function(l){return '<div><span>'+esc(l[0])+'</span><b>'+(l[1]?money(l[1]):'')+'</b></div>'}).join('')+'<div class="tot"><span>Total for this booking</span><span>'+money(q.total)+'</span></div>'+
+  var cx=q.cancel,lv=cx.lessonValue,fin=!!(B.date&&B.time&&q.final),ls=fin?q.lines:q.lines.filter(function(l){return !/^Pick-up travel/.test(l[0])});
+  return '<div class="qbox">'+ls.map(function(l){return '<div><span>'+esc(l[0])+'</span><b>'+(l[1]?money(l[1]):'')+'</b></div>'}).join('')+(fin?'<div class="tot"><span>Total for this booking</span><span>'+money(q.total)+'</span></div>':'<div class="tot"><span>Lessons</span><span>'+money(q.lessonsTotal)+'</span></div><div style="display:block;font-size:.86rem;color:var(--m)">Pick-up travel is worked out at checkout from your address and lesson time: free within about 12 min of Thornton'+(B.hours>=2?', half price on this '+B.hours+'-hr session':'')+'.</div>')+
   '<div style="color:var(--m);font-size:.84rem;display:block">Cancellation for this booking: free with '+cx.freeHours+'+ hrs notice · '+money(lv*cx.latePct/100)+' under '+cx.freeHours+' hrs · '+money(lv*cx.noshowPct/100)+' under '+cx.lateHours+' hrs / no-show.'+(q.excess?' Test package insurance excess: '+money(q.excess)+'.':'')+'</div></div>'}
 function getQuote(){if(!B.address||!API)return;$('#quote').innerHTML='<p style="margin-top:12px"><span class="spin"></span> Calculating your exact price…</p>';
-  api({action:'quote',address:B.address,hours:B.hours,purchase:B.purchase,email:$('#cEmail').value}).then(function(d){B.quote=d.quote;$('#quote').innerHTML=quoteHtml(d.quote);$('#to3').disabled=!!(d.quote.outOfArea||d.quote.error)}).catch(function(e){$('#quote').innerHTML='<div class="msg err">'+esc(e.message)+'</div>'})}
+  api({action:'quote',address:B.address,hours:B.hours,purchase:pur(),email:$('#cEmail').value}).then(function(d){B.quote=d.quote;$('#quote').innerHTML=quoteHtml(d.quote);$('#to3').disabled=!!(d.quote.outOfArea||d.quote.error);if(!$('#to3').disabled)preSlots()}).catch(function(e){$('#quote').innerHTML='<div class="msg err">'+esc(e.message)+'</div>'})}
 $('#to3').onclick=function(){step(3);loadDays()};
 function ymd(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
 var DAYS=[];
-function loadDays(){var t=new Date();t.setDate(t.getDate()+1);$('#days').innerHTML='';$('#times').innerHTML='';$('#p3msg').innerHTML='<p><span class="spin"></span> Checking RJ\'s calendar and drive times between lessons…</p>';
-  api({action:'slots',date:ymd(t),days:14,hours:B.hours,address:B.address,dropoff:B.dropoff||B.address}).then(function(d){DAYS=d.days;$('#p3msg').innerHTML='';
+function slotKey(){return B.hours+'|'+B.address+'|'+(B.dropoff||B.address)}
+function preSlots(){var k=slotKey();if(SL[k])return SL[k];var t=new Date();t.setDate(t.getDate()+1);SL[k]=api({action:'slots',date:ymd(t),days:14,hours:B.hours,address:B.address,dropoff:B.dropoff||B.address});SL[k].catch(function(){delete SL[k]});return SL[k]}
+function loadDays(){$('#days').innerHTML='';$('#times').innerHTML='';$('#p3msg').innerHTML='<p><span class="spin"></span> Loading RJ\'s free times…</p>';
+  preSlots().then(function(d){DAYS=d.days;$('#p3msg').innerHTML='';
    $('#days').innerHTML=DAYS.map(function(x,i){var dt=new Date(x.date+'T00:00');return '<button class="day" data-i="'+i+'"'+(x.slots.length?'':' style="opacity:.4"')+'><small>'+dt.toLocaleDateString('en-AU',{weekday:'short'})+'</small><b>'+dt.getDate()+'</b><small>'+(x.slots.length?x.slots.length+' free':'full')+'</small></button>'}).join('');
    $$('.day').forEach(function(b){b.onclick=function(){$$('.day').forEach(function(x){x.classList.toggle('on',x===b)});var x=DAYS[+b.dataset.i];B.date=x.date;B.time='';$('#to4').disabled=true;
     $('#times').innerHTML=x.slots.length?x.slots.map(function(s){var h=+s.slice(0,2),m=s.slice(3);return '<button data-t="'+s+'">'+((h%12)||12)+':'+m+(h<12?' am':' pm')+'</button>'}).join(''):'<p style="color:var(--m)">No free times this day — try another.</p>';
     $$('#times button').forEach(function(t){t.onclick=function(){$$('#times button').forEach(function(x){x.classList.toggle('on',x===t)});B.time=t.dataset.t;$('#to4').disabled=false}})}});
    var first=[].slice.call($$('.day')).filter(function(b){return DAYS[+b.dataset.i].slots.length})[0];if(first)first.click();else $('#p3msg').innerHTML='<div class="msg err">No free times in the next 2 weeks for this address — please call us.</div>'}).catch(function(e){$('#p3msg').innerHTML='<div class="msg err">'+esc(e.message)+'</div>'})}
 $('#to4').onclick=function(){step(4);$('#a3w').style.display=B.purchase==='test'?'flex':'none';if(B.purchase==='credit')$('#fEmail').value=$('#cEmail').value;
-  var dt=new Date(B.date+'T'+B.time);$('#sum').innerHTML='<div><span>When</span><b>'+dt.toLocaleString('en-AU',{weekday:'short',day:'numeric',month:'short',hour:'numeric',minute:'2-digit'})+' ('+B.hours+' hr)</b></div><div><span>Pick-up</span><b>'+esc(B.address)+'</b></div>'+(B.dropoff?'<div><span>Drop-off</span><b>'+esc(B.dropoff)+'</b></div>':'')+'<div class="tot"><span>Total</span><span>'+money(B.quote.total)+'</span></div>'};
+  $('#licReq').textContent=B.purchase==='credit'?'(optional if we have it already)':'(required)';var dt=new Date(B.date+'T'+B.time),head='<div><span>When</span><b>'+dt.toLocaleString('en-AU',{weekday:'short',day:'numeric',month:'short',hour:'numeric',minute:'2-digit'})+' ('+B.hours+' hr)</b></div><div><span>Pick-up</span><b>'+esc(B.address)+'</b></div>'+(B.dropoff?'<div><span>Drop-off</span><b>'+esc(B.dropoff)+' (discretionary)</b></div>':'');$('#sum').innerHTML=head+'<p><span class="spin"></span> Working out travel for that time…</p>';$('#send').disabled=true;
+  api({action:'quote',address:B.address,hours:B.hours,purchase:pur(),email:$('#cEmail').value,date:B.date,time:B.time}).then(function(d){d.quote.final=1;B.quote=d.quote;$('#sum').innerHTML=head+quoteHtml(d.quote).replace(/^<div class="qbox">/,'<div>');$('#send').disabled=!!(d.quote.outOfArea||d.quote.error)}).catch(function(e){$('#sum').innerHTML=head+'<div class="msg err">'+esc(e.message)+'</div>'})};
+function licFile(f){if(!f)return;var fr=new FileReader();fr.onload=function(){var im=new Image();im.onload=function(){var m=1600,w=im.width,h=im.height,k=Math.min(1,m/Math.max(w,h)),c=document.createElement('canvas');c.width=Math.round(w*k);c.height=Math.round(h*k);c.getContext('2d').drawImage(im,0,0,c.width,c.height);B.lic=c.toDataURL('image/jpeg',.85);$('#licPrev').innerHTML='<div class="msg ok">Licence photo added. We\'ll check it automatically.</div><img src="'+B.lic+'" alt="Licence preview">'};im.src=fr.result};fr.readAsDataURL(f)}
+$('#licCam').onchange=function(){licFile(this.files[0])};$('#licUp').onchange=function(){licFile(this.files[0])};
 $('#send').onclick=function(){var f={name:$('#fName').value.trim(),phone:$('#fPhone').value.trim(),email:$('#fEmail').value.trim(),licence:$('#fLic').value.trim(),licenceState:$('#fState').value,licenceExpiry:$('#fExp').value,licenceType:$('#fType').value,dob:$('#fDob').value,testCentre:$('#fTC').value,testDate:$('#fTD').value.replace('T',' '),testRef:$('#fTR').value.trim(),emergency:$('#fEm').value.trim(),notes:$('#fNotes').value.trim()};
   var m=$('#p4msg');if(!f.name||!f.phone||!f.email||!f.licence||!f.licenceExpiry)return m.innerHTML='<div class="msg err">Please fill in name, mobile, email, licence number and licence expiry.</div>';
   if(f.licenceExpiry<ymd(new Date()))return m.innerHTML='<div class="msg err">That licence has expired — please renew it before booking.</div>';
+  if(!B.lic&&B.purchase!=='credit')return m.innerHTML='<div class="msg err">Please add a photo of your licence (take a photo or upload a screenshot of your digital licence).</div>';
   if(!$('#a1').checked||!$('#a2').checked||(B.purchase==='test'&&!$('#a3').checked))return m.innerHTML='<div class="msg err">Please tick the boxes to continue.</div>';
-  var body=Object.assign({action:'book',address:B.address,coords:B.coords,dropoff:B.dropoff,date:B.date,time:B.time,hours:B.hours,purchase:B.purchase},f);
-  $('#send').disabled=true;m.innerHTML='<p><span class="spin"></span> Sending…</p>';
+  var body=Object.assign({action:'book',address:B.address,coords:B.coords,dropoff:B.dropoff,date:B.date,time:B.time,hours:B.hours,purchase:pur(),licencePhoto:B.lic},f);
+  $('#send').disabled=true;m.innerHTML='<p><span class="spin"></span> Sending and checking your licence photo…</p>';
   post(body).then(function(d){if(!d.ok)throw new Error(d.error);try{localStorage.setItem('ss_email',f.email.toLowerCase())}catch(e){}
    $('#p4').innerHTML='<div style="text-align:center;padding:20px"><div style="font-size:3.5rem">🎉</div><h3 style="font-size:1.6rem;margin:10px 0">Request sent!</h3><p>Booking ref <b>'+esc(d.id)+'</b>. RJ will review it and you\'ll get a confirmation email with payment details.<br>Check your inbox (and spam) for "We got your booking request".</p></div>';confetti()}).catch(function(e){$('#send').disabled=false;m.innerHTML='<div class="msg err">'+esc(e.message)+'</div>'})};
 
@@ -510,7 +563,7 @@ function add(t,who){var d=document.createElement('div');d.className='m '+(who||'
 function quick(list){var d=document.createElement('div');d.className='qr';list.forEach(function(l){var b=document.createElement('button');b.textContent=l[0];b.onclick=function(){add(esc(l[0]),'me');d.remove();l[1]()};d.appendChild(b)});$('#cb').appendChild(d);$('#cb').scrollTop=1e9}
 function menu(){quick([['💰 Prices',prices],['📏 How many lessons do I need?',needs],['📍 Do you cover my suburb?',function(){add('Type your suburb and I\'ll check 👇')}],['📝 Test package',function(){add('Test package: '+money(P('price.test_package'))+' — pick-up, a 1-hour warm-up on local test routes, our car for your test, then drop-off. Damage while you drive is subject to a '+money(P('price.test_excess'))+' insurance excess.');more()}],['Book now',function(){toggleChat();location.href='book.html'}]])}
 function more(){setTimeout(function(){quick([['Something else',menu],['💬 Talk to RJ on WhatsApp',function(){window.open('https://wa.me/61455585556')}]])},300)}
-function prices(){add('Lesson prices (1 hour each):\n• 1 lesson: '+money(P('price.one'))+'\n• 2–4 lessons: '+money(P('price.two_to_four'))+' each\n• 5–9 lessons: '+money(P('price.five_to_nine'))+' each\n• 10+ lessons: '+money(P('price.ten_plus'))+' each\n• Test package: '+money(P('price.test_package'))+'\nTravel: free within ~12 min of Thornton, +'+money(P('travel.tier1_fee'))+' or +'+money(P('travel.tier2_fee'))+' per trip further out.\n\nTip: type "price for 7 lessons" and I\'ll work it out exactly.');more()}
+function prices(){add('Lesson prices (1 hour each):\n• 1 lesson: '+money(P('price.one'))+'\n• 2–4 lessons: '+money(P('price.two_to_four'))+' each\n• 5–9 lessons: '+money(P('price.five_to_nine'))+' each\n• 10+ lessons: '+money(P('price.ten_plus'))+' each\n• Test package: '+money(P('price.test_package'))+'\n2-hour sessions: '+money(P('price.long_session'))+'/hr\nTravel: free within ~12 min of Thornton; further out a small charge is shown at checkout (half on 2-hr sessions).\n\nTip: type "price for 7 lessons" and I\'ll work it out exactly.');more()}
 var N={};
 function needs(){N={};add('Let\'s work it out! How much driving have you done so far?');quick([['Never driven',function(){N.exp=0;n2()}],['A little (under 20 hrs)',function(){N.exp=1;n2()}],['Quite a bit (20–80 hrs)',function(){N.exp=2;n2()}],['Almost test-ready (80+ hrs)',function(){N.exp=3;n2()}],['Overseas licence holder',function(){N.exp=4;n2()}]])}
 function n2(){add('How do you feel behind the wheel?');quick([['Nervous 😬',function(){N.nerv=1;n3()}],['Pretty comfortable 🙂',function(){N.nerv=0;n3()}]])}
@@ -560,6 +613,43 @@ $('#yr').textContent=new Date().getFullYear();
 applyContent();
 if(EDIT){document.body.classList.add('editing');window.SS={get C(){return C},setFonts:setFonts,applyContent:applyContent,P:P}}
 if(API)api({action:'content'}).then(function(d){C=d.content||{};FAQ=d.faq||[];applyContent(true);track('Visited site',document.referrer||'direct')}).catch(function(){});
+</script>
+<script>
+/* ===== booking pop-up ===== */
+function openBook(pkg){if(pkg){B.purchase=pkg==='test'?'test':pkg;if(pkg==='test')B.hours=1;buildPkgs()}document.body.classList.add('bkopen');$('#book').scrollTop=0;track('Booking popup',pkg||'')}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-book]');if(!a)return;e.preventDefault();openBook(a.dataset.book)});
+$('#bkx').onclick=function(){document.body.classList.remove('bkopen')};
+$('#book').addEventListener('click',function(e){if(e.target===this&&document.body.classList.contains('bkopen'))document.body.classList.remove('bkopen')});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.body.classList.remove('bkopen')});
+/* ===== area map ===== */
+(function(){var sec=$('#area');if(!sec||getComputedStyle(sec).display==='none'||EDIT)return;
+ var C=[-32.7826,151.6406],MAP,LY=[];
+ function css(h){var l=document.createElement('link');l.rel='stylesheet';l.href=h;document.head.appendChild(l)}
+ function js(h,cb){var s=document.createElement('script');s.src=h;s.onload=cb;document.head.appendChild(s)}
+ css('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css');
+ js('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js',function(){
+  MAP=L.map('map',{scrollWheelZoom:false}).setView(C,10);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap'}).addTo(MAP);
+  L.circle(C,{radius:28000,color:'#14213D',weight:1.5,fillColor:'#14213D',fillOpacity:.07}).addTo(MAP).bindTooltip('Extended area (up to ~30 min)');
+  L.circle(C,{radius:10000,color:'#E8B931',weight:2,fillColor:'#E8B931',fillOpacity:.25}).addTo(MAP).bindTooltip('Free pick-up zone (~12 min)');
+  L.circleMarker(C,{radius:7,color:'#14213D',fillColor:'#E8B931',fillOpacity:1,weight:2}).addTo(MAP).bindTooltip('Thornton',{permanent:true,direction:'right'});
+ });
+ function dec(p){var a=[],i=0,lat=0,lng=0;while(i<p.length){var b,s=0,r=0;do{b=p.charCodeAt(i++)-63;r|=(b&31)<<s;s+=5}while(b>=32);lat+=r&1?~(r>>1):r>>1;s=0;r=0;do{b=p.charCodeAt(i++)-63;r|=(b&31)<<s;s+=5}while(b>=32);lng+=r&1?~(r>>1):r>>1;a.push([lat/1e5,lng/1e5])}return a}
+ var PC={2320:'Maitland,Rutherford,Telarah,Bolwarra,Lorn,Morpeth,Aberglasslyn,South Maitland',2321:'Gillieston Heights,Heddon Greta,Cliftleigh,Louth Park,Lochinvar,Hinton',2322:'Thornton,Chisholm,Beresfield,Woodberry,Tarro,Black Hill,Hexham,Tomago',2323:'East Maitland,Ashtonfield,Metford,Tenambit,Green Hills',2324:'Raymond Terrace,Medowie,Heatherbrae,Williamtown,Seaham',2325:'Cessnock,Bellbird,Kearsley',2326:'Abermain,Weston,Neath',2327:'Kurri Kurri,Pelaw Main,Stanford Merthyr',2334:'Greta',2335:'Branxton',2287:'Wallsend,Maryland,Fletcher,Minmi',2299:'Lambton,Jesmond',2286:'West Wallsend,Holmesville'};
+ function go(){var q=$('#aq').value.trim();if(q.length<3)return;
+  if(/^\d{4}$/.test(q)&&PC[q]){$('#aOut').innerHTML='<p style="margin:12px 0 6px">Which suburb in '+q+'?</p><div class="opts">'+PC[q].split(',').map(function(x){return '<button class="opt" data-s="'+x+'">'+x+'</button>'}).join('')+'</div>';$$('#aOut [data-s]').forEach(function(b){b.onclick=function(){$('#aq').value=b.dataset.s+' NSW '+q;go()}});return}$('#aOut').innerHTML='<p style="margin-top:10px"><span class="spin"></span> Finding the route…</p>';
+  api({action:'area',q:/^\d{4}$/.test(q)?q+' NSW':q}).then(function(d){var z=d.area;if(!z.found){$('#aOut').innerHTML='<div class="zr out">We couldn\'t find that. Try adding the suburb.</div>';return}
+   track('Area check',z.address+' '+z.driveMin+'min');
+   var t=z.zone==='free'?['free','✅ Free pick-up zone','No travel charge. We pick you up and drop you off at no extra cost.']:z.zone==='extended'?['ext','✅ We come to you','You\'re in our extended area. Any small travel charge is shown at checkout for your lesson time, and it\'s half price on 2-hour sessions.']:['out','Outside our usual area','Message us anyway: if RJ already has a student nearby we can often fit you in.'];
+   $('#aOut').innerHTML='<div class="zr '+t[0]+'"><b>'+t[1]+'</b><br>'+esc(z.address)+'<br>About <b>'+z.driveMin+' min</b>'+(z.km?' · '+z.km+' km':'')+' from Thornton.<br>'+t[2]+(z.zone!=='out'?'<br><button class="btn b-k" id="aBook">Book a lesson at this address</button>':'<br><a class="btn b-k" href="https://wa.me/61455585556">WhatsApp RJ</a>')+'</div>';
+   var ab=$('#aBook');if(ab)ab.onclick=function(){$('#addr').value=z.address;openBook('');find('#addr','#aRes',false)};
+   if(MAP){LY.forEach(function(l){MAP.removeLayer(l)});LY=[];var pts=z.poly?dec(z.poly):[];
+    if(pts.length)LY.push(L.polyline(pts,{color:'#14213D',weight:5,opacity:.85}).addTo(MAP));
+    LY.push(L.marker([z.lat,z.lng]).addTo(MAP).bindPopup(esc(z.address.split(',')[0])+': '+z.driveMin+' min').openPopup());
+    MAP.fitBounds(L.latLngBounds(pts.length?pts:[C,[z.lat,z.lng]]).pad(.2))}
+  }).catch(function(e){$('#aOut').innerHTML='<div class="zr out">'+esc(e.message)+'</div>'})}
+ $('#aGo').onclick=go;$('#aq').onkeydown=function(e){if(e.key==='Enter')go()};
+})();
 </script>
 <script>(function(){if(/[?&]edit=1/.test(location.search))return;var re=/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{1F1E6}-\u{1F1FF}\u{FE0F}\u{200D}]/gu;function strip(){var w=document.createTreeWalker(document.querySelector('main')||document.body,NodeFilter.SHOW_TEXT);var n;while(n=w.nextNode()){if(re.test(n.nodeValue)){n.nodeValue=n.nodeValue.replace(re,'').replace(/^\s+/,'')}}}strip();var c=0,t=setInterval(function(){strip();if(++c>10)clearInterval(t)},500)})();</script>
 </body>
